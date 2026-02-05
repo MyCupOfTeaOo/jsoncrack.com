@@ -70,6 +70,7 @@ export const ImportModal = ({ opened, onClose }: ModalProps) => {
             onDrop={files => setFile(files[0])}
             onReject={files => toast.error(`Unable to load file ${files[0].file.name}`)}
             maxFiles={1}
+            maxSize={Infinity}
             p="md"
             accept={[
               "application/json",

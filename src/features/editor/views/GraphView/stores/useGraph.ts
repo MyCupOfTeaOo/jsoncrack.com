@@ -52,14 +52,6 @@ const useGraph = create<Graph & GraphActions>((set, get) => ({
   setGraph: (data, options) => {
     const { nodes, edges } = parser(data ?? useJson.getState().json);
 
-    if (nodes.length > SUPPORTED_LIMIT) {
-      return set({
-        aboveSupportedLimit: true,
-        ...options,
-        loading: false,
-      });
-    }
-
     set({
       nodes,
       edges,

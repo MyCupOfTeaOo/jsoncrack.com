@@ -12,6 +12,7 @@ export const FullscreenDropzone = () => {
   return (
     <Dropzone.FullScreen
       maxFiles={1}
+      maxSize={Infinity}
       accept={[
         "application/json",
         "application/x-yaml",
@@ -46,7 +47,7 @@ export const FullscreenDropzone = () => {
             Upload to JSON Crack
           </Text>
           <Text fz="lg" c="dimmed" mt="sm">
-            (Max file size: 300 KB)
+            Drag and drop your file here
           </Text>
         </Dropzone.Accept>
         <Dropzone.Reject>
